@@ -28,3 +28,7 @@ Of course that is "just send it twice to make sure", aka. the ✨**FEC-ski**:tm:
 - [..?] Timestamp
 
 - [last 16 bits] CRC 16
+
+### "Official" sources for data corelation
+- http://ipg.geospace.ru/electro-l2-skl.html
+- https://ftp.sinp.msu.ru/electro_l2/skl
