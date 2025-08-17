@@ -18,6 +18,8 @@ The purpose os this repository is to have a collaborative space where data, docu
 
 When you think about FEC in satellite communications you'll probably think of Viterbi, Reed-Solomon, LDPC, Turbo, and other _fancy implementations_. But of course, The Russian engineers had to go galaxy brain 🧠 here, so they used a very ancient and widely known and used technique ~(maybe by the Egyptians, Romans, Incas, and Maias)~.
 
+![FECski](./imgs/fecski.png) 
+
 Of course that is "just send it twice to make sure", aka. the ✨**FEC-ski**:tm:✨. 🤫 _Because why would you even spend time reading about what Shannon, Hamming, and Golay did if you can just send the data twice to make sure everything got received as it should_ 🧠.
 
 ### Frame Format
