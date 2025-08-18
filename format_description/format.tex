@@ -61,9 +61,17 @@
         \cmidrule{1-7}
       \end{tblr}
     };
-    \draw[Straight Barb-Straight Barb, thick, shorten <=10mm, shorten >=10mm]
-    (m.north west) -- node[above] {1792 bits}
-    (m.north east);
+    \draw[-Straight Barb, thick, shorten <=10mm, shorten >=5mm]
+    (m.north) --
+    (m.north west);
+    \draw[]
+    (m.north) node[centered] {1792 bits};
+    \draw[Straight Barb-, thick, shorten <=5mm, shorten >=10mm]
+    (m.north east) --
+    (m.north);
+    % \draw[Straight Barb-Straight Barb, thick, shorten <=10mm, shorten >=10mm]
+    % (m.north west) -- node[above] {1792 bits}
+    % (m.north east);
   \end{tikzpicture}
   \label{table:el2}
   \caption{Elektro-L2 GGAK Frame Structure}
@@ -91,8 +99,8 @@
   \captionsetup[subfigure]{labelformat=empty}
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{00000000}\\
     \end{bytefield}
@@ -100,8 +108,8 @@
   \end{subfigure}%
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{00010000}\\
     \end{bytefield}
@@ -110,8 +118,8 @@
   \par\bigskip
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{00100000}\\
     \end{bytefield}
@@ -119,8 +127,8 @@
   \end{subfigure}%
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{00110000}\\
     \end{bytefield}
@@ -129,8 +137,8 @@
   \par\bigskip
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{01000000}\\
     \end{bytefield}
@@ -138,8 +146,8 @@
   \end{subfigure}%
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{01010000}\\
     \end{bytefield}
@@ -148,8 +156,8 @@
   \par\bigskip
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{01100000}\\
     \end{bytefield}
@@ -158,21 +166,21 @@
   \par\bigskip
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{01110000}\\
     \end{bytefield}
-    \caption{Marker 7 - Sub Marker 0}
+    \caption{Marker 7 and Sub Marker 0}
   \end{subfigure}%
   \begin{subfigure}[hb!]{0.5\textwidth}
     \centering
-    \begin{bytefield}[bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
-      \bitheader[endianness=little]{0,3,4,7} \\
+    \begin{bytefield}[lsb=32,bitheight=4ex,bitwidth=4ex,boxformatting={\centering\small}]{8}
+      \bitheader[endianness=little]{32,35,36,39} \\
       \bitboxes{4}{{Marker}{Sub Marker}} \\
       \bitboxes{1}{01110111}\\
     \end{bytefield}
-    \caption{Marker 7 - Sub Marker 7}
+    \caption{Marker 7 and Sub Marker 7}
   \end{subfigure}
   \caption{Elektro-L 2 GGAK - Marker and Sub Marker}
   \label{fig:ele2markers}
