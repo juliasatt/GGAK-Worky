@@ -8,8 +8,8 @@ The purpose os this repository is to have a collaborative space where data, docu
 
 ### Repo's To Do List
 
-- [-] Description of the format
-- [-] Code for processing the data gathered from SatDump (or any other software)
+- [ ] Description of the format
+- [ ] Code for processing the data gathered from SatDump (or any other software)
 - [ ] SatDump Plugin
 
 ## Frame Description
@@ -24,10 +24,13 @@ Of course that is "just send it twice to make sure", aka. the ✨**FEC-ski**:tm:
 
 ### Frame Format
 
-- [32 bits] Standard CCSDS sync word `0x1ACFFC1D`
-- [..?] Timestamp
-
-- [last 16 bits] CRC 16
+- **32 bits** Standard CCSDS sync word `0x1ACFFC1D`
+- **4 bits** Frame ID/Marker
+- **4 bits** Sub ID/Marker
+- **64 bits** Timestamp
+- **Varies** Data blocks, divided into 50 bits each
+- **Varies** Filler `0xAA`, not present in all frames
+- **16 bits** CRC 16
 
 ### "Official" sources for data corelation
 - http://ipg.geospace.ru/electro-l2-skl.html
